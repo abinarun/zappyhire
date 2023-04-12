@@ -17,13 +17,4 @@ phases:
       - npm run test:ci
   post_build:
     commands:
-      - aws s3 sync ./dist/angular-devops s3://angular-cicd-s3 --acl 'public-read' --delete
-
-artifacts:
-  files:
-    - '**/*.html'
-    - '**/*.js'
-    - '**/*.css'
-    - '**/*.ico'
-  discard-paths: yes
-  base-directory: 'dist/angular-devops'
+      - aws s3 sync .zappyhire s3://angular-cicd-s3 --acl 'public-read' --delete
